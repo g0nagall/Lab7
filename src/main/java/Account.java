@@ -2,7 +2,7 @@ public class Account {
 
     private String iban;
 
-    private AccountType type;
+    private boolean type;
 
     private int daysOverdrawn;
 
@@ -12,7 +12,7 @@ public class Account {
 
     public Customer customer;
 
-    public Account(AccountType type, int daysOverdrawn) {
+    public Account(boolean type, int daysOverdrawn) {
         super();
         this.type = type;
         this.daysOverdrawn = daysOverdrawn;
@@ -22,7 +22,7 @@ public class Account {
         if (!getCurrency().equals(currency)) {
             throw new RuntimeException("Can't extract withdraw " + currency);
         }
-        withdrawOperations(sum, getType().isPremium(), customer);
+        withdrawOperations(sum, getType(), customer);
     }
 
     private void withdrawOperations(double sum, boolean premium, Customer customer) {
@@ -46,7 +46,7 @@ public class Account {
     }
 
     private double overdraftCharge() {
-        if (type.isPremium()) {
+        if (type) {
             double result = 10;
             if (getDaysOverdrawn() > 7)
                 result += (getDaysOverdrawn() - 7) * 1.0;
@@ -56,7 +56,7 @@ public class Account {
     }
 
     public double overdraftFee() {
-        if (type.isPremium()) {
+        if (type) {
             return 0.10;
         } else {
             return 0.20;
@@ -92,7 +92,7 @@ public class Account {
         this.customer = customer;
     }
 
-    public AccountType getType() {
+    public boolean getType() {
         return type;
     }
 
