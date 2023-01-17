@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71fe9db6-5b38-475f-b5d6-c46c5e261ee0" name="Changes" comment="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer">
+    <list default="true" id="71fe9db6-5b38-475f-b5d6-c46c5e261ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673920065476</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="8. AccountMoney class added">
+      <created>1673920199715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673920199715</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -115,6 +122,7 @@
     <MESSAGE value="4. Comments in Customer.withdraw" />
     <MESSAGE value="6. withdraw is now in Account class" />
     <MESSAGE value="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer" />
+    <MESSAGE value="8. AccountMoney class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="8. AccountMoney class added" />
   </component>
 </project>
