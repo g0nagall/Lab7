@@ -36,7 +36,6 @@ public class Customer {
         double companyValue = (isCompany) ? companyOverdraftDiscount / discountValue : 1;
 
         if (account.getMoney() < 0) {
-            // 50 percent discount for overdraft for premium account
             account.setMoney((account.getMoney() - sum) - sum * account.overdraftFee() * companyValue);
         } else {
             account.setMoney(account.getMoney() - sum);
