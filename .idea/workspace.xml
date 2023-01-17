@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71fe9db6-5b38-475f-b5d6-c46c5e261ee0" name="Changes" comment="">
+    <list default="true" id="71fe9db6-5b38-475f-b5d6-c46c5e261ee0" name="Changes" comment="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673918616745</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6. withdraw is now in Account class">
+      <created>1673919317314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673919317314</updated>
+    </task>
+    <task id="LOCAL-00006" summary="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer">
+      <created>1673920065476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673920065476</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -101,6 +113,8 @@
     <MESSAGE value="2. Long Method, withdraw simplified" />
     <MESSAGE value="3. New Customer types" />
     <MESSAGE value="4. Comments in Customer.withdraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="4. Comments in Customer.withdraw" />
+    <MESSAGE value="6. withdraw is now in Account class" />
+    <MESSAGE value="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="7. 7. printCustomerDaysOverDrawn is now in Account, printCustomer is in Customer" />
   </component>
 </project>
