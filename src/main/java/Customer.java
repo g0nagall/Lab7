@@ -24,23 +24,7 @@ public class Customer {
         this.companyOverdraftDiscount = companyOverdraftDiscount;
     }
 
-    public void withdraw(double sum, String currency) {
-        if (!account.getCurrency().equals(currency)) {
-            throw new RuntimeException("Can't extract withdraw " + currency);
-        }
-        withdrawOperations(sum, account.getType().isPremium(), (customerType == CustomerType.COMPANY));
-    }
 
-    private void withdrawOperations(double sum, boolean premium, boolean isCompany) {
-        double discountValue = (premium) ? 2 : 1;
-        double companyValue = (isCompany) ? companyOverdraftDiscount / discountValue : 1;
-
-        if (account.getMoney() < 0) {
-            account.setMoney((account.getMoney() - sum) - sum * account.overdraftFee() * companyValue);
-        } else {
-            account.setMoney(account.getMoney() - sum);
-        }
-    }
 
     public String getName() {
         return name;
@@ -81,7 +65,10 @@ public class Customer {
     }
 
     public String printCustomerAccount() {
-        return "Account: IBAN: " + account.getIban() + ", Money: "
-                + account.getMoney() + ", Account type: " + account.getType();
+        return account.toString();
+    }
+
+    public double getCompanyOverdraftDiscount() {
+        return companyOverdraftDiscount;
     }
 }

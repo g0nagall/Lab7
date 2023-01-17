@@ -10,12 +10,31 @@ public class Account {
 
     private String currency;
 
-    private Customer customer;
+    public Customer customer;
 
     public Account(AccountType type, int daysOverdrawn) {
         super();
         this.type = type;
         this.daysOverdrawn = daysOverdrawn;
+    }
+
+    public void withdraw(double sum, String currency, Customer customer) {
+        if (!getCurrency().equals(currency)) {
+            throw new RuntimeException("Can't extract withdraw " + currency);
+        }
+        withdrawOperations(sum, getType().isPremium(), customer);
+    }
+
+    private void withdrawOperations(double sum, boolean premium, Customer customer) {
+        double discountValue = (premium) ? 2 : 1;
+        double companyValue = (customer.getCustomerType() == CustomerType.COMPANY) ?
+                customer.getCompanyOverdraftDiscount() / discountValue : 1;
+
+        if (getMoney() < 0) {
+            setMoney((getMoney() - sum) - sum * overdraftFee() * companyValue);
+        } else {
+            setMoney(getMoney() - sum);
+        }
     }
 
     public double bankcharge() {
@@ -87,5 +106,11 @@ public class Account {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    @Override
+    public String toString() {
+        return "Account: IBAN: " + getIban() + ", Money: "
+                + getMoney() + ", Account type: " + getType();
     }
 }
